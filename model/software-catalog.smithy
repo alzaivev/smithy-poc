@@ -1,15 +1,15 @@
 $version: "2"
-metadata validators = [
-    {
-        id: "HttpResponseCodeSemantics"
-        name: "EmitEachSelector"
-//        namespace: "api.v1.software_catalog"
-//        reason: "HTTP status code 303 is a valid response for SoftwareReleasesDownload operation"
-        configuration: {
-            selector: ":not([id|name = 'SoftwareReleasesDownload' i])"
-        }
-    }
-]
+//metadata validators = [
+//    {
+//        id: "HttpResponseCodeSemantics"
+//        name: "EmitEachSelector"
+////        namespace: "api.v1.software_catalog"
+////        reason: "HTTP status code 303 is a valid response for SoftwareReleasesDownload operation"
+//        configuration: {
+//            selector: ":not([id|name = 'SoftwareReleasesDownload' i])"
+//        }
+//    }
+//]
 
 namespace api.v1.software_catalog
 
@@ -97,7 +97,7 @@ operation SoftwareReleasesList {
 }
 
 // TODO: cannot specify 303 status code
-@http(method: "POST", uri: "/api/v1/software-releases/{releaseId}/download", code: 303)
+@http(method: "POST", uri: "/api/v1/software-releases/{releaseId}/download", code: 200)
 operation SoftwareReleasesDownload {
     input: SoftwareReleasesDownloadInput
     output: SoftwareReleasesDownloadOutput
