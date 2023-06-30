@@ -1,0 +1,12 @@
+{
+    "version": "2.0",
+    "plugins": {
+        "openapi": {
+            "service": "api.v1.software_catalog#SoftwareCatalog",
+            "version": "3.1.0",
+            "protocol": "aws.protocols#restJson1",
+            "jsonContentType": "application/json; charset=utf-8",
+            "ignoreUnsupportedTraits": true
+        }
+    }
+}
